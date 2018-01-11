@@ -13,6 +13,15 @@ docker run -d -p 8080:80 php-docker-apache-example
 
 # to connect terminal to particular image/container
 docker run -i -t --entrypoint /bin/bash <imageID>
+
+# to run container in backgroud
+docker run -t -d <imageID>
+
+# to get the list of images
+docker images
+
+# to get the list of containes
+docker container ls
 ```
 
 And you can see the result here:
