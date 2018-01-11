@@ -11,8 +11,11 @@ docker build -t php-docker-apache-example .
 # port 80 to this machine's port 8080
 docker run -d -p 8080:80 php-docker-apache-example
 
-# to connect terminal to particular image/container
+# to connect terminal to particular image/container on front
 docker run -i -t --entrypoint /bin/bash <imageID>
+
+# to connect terminal of particular already running container in backend
+docker exec -i -t <Container_ID> /bin/bash
 
 # to run container in backgroud
 docker run -t -d <imageID>
