@@ -10,6 +10,9 @@ docker build -t php-docker-apache-example .
 # run the docker container on this machine. Expose its internal
 # port 80 to this machine's port 8080
 docker run -d -p 8080:80 php-docker-apache-example
+
+# to connect terminal to particular image/container
+docker run -i -t --entrypoint /bin/bash <imageID>
 ```
 
 And you can see the result here:
