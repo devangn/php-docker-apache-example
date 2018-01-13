@@ -29,6 +29,10 @@ docker container ls
 # to set the static ip to container https://stackoverflow.com/questions/25529386/how-can-i-set-a-static-ip-address-in-a-docker-container
 docker network create --subnet=192.168.1.0/24 mynetwork
 docker run -t -d --net mynetwork --ip 192.168.1.122 <Image_ID>
+
+# start containers from docker-compose in backgroup
+docker-compose up -d
+
 ```
 
 And you can see the result here:
