@@ -33,6 +33,9 @@ docker run -t -d --net mynetwork --ip 192.168.1.122 <Image_ID>
 # start containers from docker-compose in backgroup
 docker-compose up -d
 
+# stop all running containers
+docker stop $(docker ps -aq)
+
 ```
 
 And you can see the result here:
