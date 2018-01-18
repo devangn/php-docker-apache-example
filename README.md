@@ -39,6 +39,9 @@ docker stop $(docker ps -aq)
 # Remove all exited containers
 docker rm $(docker ps -a -f status=exited -q)
 
+# Check logs
+docker logs <Container_ID>
+
 ```
 
 And you can see the result here:
