@@ -36,6 +36,9 @@ docker-compose up -d
 # stop all running containers
 docker stop $(docker ps -aq)
 
+# Remove all exited containers
+docker rm $(docker ps -a -f status=exited -q)
+
 ```
 
 And you can see the result here:
