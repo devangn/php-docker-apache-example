@@ -42,6 +42,9 @@ docker rm $(docker ps -a -f status=exited -q)
 # Check logs
 docker logs <Container_ID>
 
+# Check the status for container under composer
+docker-compose ps
+
 ```
 
 And you can see the result here:
