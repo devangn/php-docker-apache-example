@@ -55,6 +55,9 @@ docker stop $(docker ps -aq)
 # Remove all exited containers
 docker rm $(docker ps -a -f status=exited -q)
 
+#remove image
+docker rmi <image_id>
+
 # Check logs
 docker logs <Container_ID>
 
