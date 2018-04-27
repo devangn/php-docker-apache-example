@@ -2,6 +2,7 @@
 
 #### Important links
 https://gist.github.com/thaJeztah/8d0e901bd21329d80cf2
+https://stackoverflow.com/questions/41984399/denied-requested-access-to-the-resource-is-denied-docker
 
 #### How does it work?
 
@@ -19,6 +20,17 @@ sudo docker exec -i -t <container_name_or_id> /bin/bash
 
 # to connect terminal of particular already running container in backend
 docker exec -i -t <Container_ID> /bin/bash
+
+#commit and push image to docker hub
+first pull from source and run the container
+Commit your changes with adding tag to it
+docker commit --message="Will change freeswith as per ASTPP" freeswitch freeswitch_astpp:280418
+[Second way: then tag it
+docker tag firstimage YOUR_DOCKERHUB_NAME/firstimage]
+then login into your docker account
+docker login
+then push the container as your account's repo
+docker push devangn/freeswitch_astpp:280418
 
 # to run container in backgroud
 docker run -t -d <imageID>
