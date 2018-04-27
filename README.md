@@ -13,6 +13,7 @@ docker run -d -p 8080:80 php-docker-apache-example
 
 # to connect terminal to particular image/container on front
 docker run -i -t --entrypoint /bin/bash <imageID>
+sudo docker exec -i -t <container_name_or_id> /bin/bash
 
 # to connect terminal of particular already running container in backend
 docker exec -i -t <Container_ID> /bin/bash
