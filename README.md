@@ -10,6 +10,8 @@ https://stackoverflow.com/questions/41984399/denied-requested-access-to-the-reso
 ```bash
 # build the docker image
 docker build -t php-docker-apache-example .
+# to run docker container from Dockerfile, here 'freeswitch' will be the container's name
+docker build -t "freeswitch:dockerfile" .
 
 # run the docker container on this machine. Expose its internal
 # port 80 to this machine's port 8080
