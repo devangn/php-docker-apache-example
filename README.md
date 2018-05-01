@@ -14,8 +14,9 @@ docker build -t php-docker-apache-example .
 docker build -t "freeswitch:dockerfile" .
 
 # run the docker container on this machine. Expose its internal
-# port 80 to this machine's port 8080
+# port 80(Container's) to this machine's port 8080(Host's)
 docker run -d -p 8080:80 php-docker-apache-example
+
 
 # to connect terminal to particular image/container on front
 docker run -i -t --entrypoint /bin/bash <imageID>
