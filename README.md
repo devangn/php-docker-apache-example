@@ -22,6 +22,9 @@ docker run -d -p 8080:80 php-docker-apache-example
 docker run -i -t --entrypoint /bin/bash <imageID>
 sudo docker exec -i -t <container_name_or_id> /bin/bash
 
+#This will start all container which are in exited state.
+docker start $(docker ps -a -q --filter "status=exited")
+
 # to connect terminal of particular already running container in backend
 docker exec -i -t <Container_ID> /bin/bash
 
