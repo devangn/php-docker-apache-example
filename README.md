@@ -17,6 +17,8 @@ docker build -t "freeswitch:dockerfile" .
 # port 80(Container's) to this machine's port 8080(Host's)
 docker run -d -p 8080:80 php-docker-apache-example
 
+#IMP
+By typing ctrl+p and ctrl+q after each other, you turn interactive mode to daemon mode, which keeps the container running but frees up your terminal.
 
 # to connect terminal to particular image/container on front
 docker run -i -t --entrypoint /bin/bash <imageID>
