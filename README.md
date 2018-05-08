@@ -23,6 +23,8 @@ By typing ctrl+p and ctrl+q after each other, you turn interactive mode to daemo
 # to connect terminal to particular image/container on front
 docker run -i -t --entrypoint /bin/bash <imageID>
 sudo docker exec -i -t <container_name_or_id> /bin/bash
+# to run the container with big resolution
+docker exec -e COLUMNS=$COLUMNS -e LINES=$LINES -e TERM=$TERM -i -t f992c5b5e2ca /bin/bash
 
 #This will start all container which are in exited state.
 docker start $(docker ps -a -q --filter "status=exited")
