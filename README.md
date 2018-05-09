@@ -22,6 +22,9 @@ docker build -t "freeswitch:dockerfile" .
 # port 80(Container's) to this machine's port 8080(Host's)
 docker run -d -p 8080:80 php-docker-apache-example
 
+#For astpp-freeswitch container
+docker run -i -t -p 6061:5060 -p 6061:5060/udp -p 16384:16384/udp -p 16385:16385/udp -p 16386:16386/udp -p 16387:16387/udp -p 16388:16388/udp -p 16389:16389/udp -p 16390:16390/udp -p 16391:16391/udp -p 16392:16392/udp -p 16393:16393/udp --name fs_employee_name <image_id> /bin/bash
+
 #IMP
 By typing ctrl+p and ctrl+q after each other, you turn interactive mode to daemon mode, which keeps the container running but frees up your terminal.
 
