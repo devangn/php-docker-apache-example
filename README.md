@@ -2,7 +2,9 @@
 
 #### Important links
 https://gist.github.com/thaJeztah/8d0e901bd21329d80cf2
+
 https://stackoverflow.com/questions/41984399/denied-requested-access-to-the-resource-is-denied-docker
+
 https://runnable.com/blog/9-common-dockerfile-mistakes
 
 #### How does it work?
