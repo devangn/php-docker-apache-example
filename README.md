@@ -23,7 +23,7 @@ docker build -t "freeswitch:dockerfile" .
 docker run -d -p 8080:80 php-docker-apache-example
 
 #For astpp-freeswitch container
-docker run -i -t -p 6061:5060 -p 6061:5060/udp -p 16384:16384/udp -p 16385:16385/udp -p 16386:16386/udp -p 16387:16387/udp -p 16388:16388/udp -p 16389:16389/udp -p 16390:16390/udp -p 16391:16391/udp -p 16392:16392/udp -p 16393:16393/udp --name fs_employee_name <image_id> /bin/bash
+docker run --restart=always -i -t -p 4001:8021 -p 5001:5001 -p 5001:5001/udp -p 17000:17000/udp -p 17001:17001/udp -p 17002:17002/udp -p 17003:17003/udp -p 17004:17004/udp -p 17005:17005/udp -p 17006:17006/udp -p 17007:17007/udp -p 17008:17008/udp -p 17009:17009/udp --name fs_ketan <image_id> /bin/bash
 
 #IMP
 By typing ctrl+p and ctrl+q after each other, you turn interactive mode to daemon mode, which keeps the container running but frees up your terminal.
