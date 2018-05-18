@@ -58,6 +58,14 @@ docker login
 then push the container as your account's repo
 docker push devangn/freeswitch_astpp:280418
 
+# How to copy docker images from one host to another
+You will need to save the docker image as a tar file:
+docker save -o <path for generated tar file> <image name>
+
+Then copy your image to a new system with regular file transfer tools such as cp or scp. After that you will have to load the image into docker:
+docker load -i <path to image tar file>
+
+
 # to run container in backgroud
 docker run -t -d <imageID>
 
