@@ -25,6 +25,8 @@ docker run -d -p 8080:80 php-docker-apache-example
 #For astpp-freeswitch container
 docker run --restart=always -i -t -p 4001:8021 -p 5001:5001 -p 5001:5001/udp -p 17000:17000/udp -p 17001:17001/udp -p 17002:17002/udp -p 17003:17003/udp -p 17004:17004/udp -p 17005:17005/udp -p 17006:17006/udp -p 17007:17007/udp -p 17008:17008/udp -p 17009:17009/udp --name fs_ketan <image_id> /bin/bash
 
+docker run --restart=always -i -t -p 4004:8021 -p 5004:5004 -p 5004:5004/udp -p 18001-18500:18001-18500/udp --name fs_ankit fd257891580e /bin/bash
+
 sudo iptables -A DOCKER -t nat -p udp -m udp ! -i docker0 --dport 16384:32767 -j DNAT --to-destination 172.17.0.2:16384-32767
 sudo iptables -A DOCKER -p udp -m udp -d 172.17.0.2/32 ! -i docker0 -o docker0 --dport 16384:32767 -j ACCEPT
 sudo iptables -A POSTROUTING -t nat -p udp -m udp -s 172.17.0.2/32 -d 172.17.0.2/32 --dport 16384:32767 -j MASQUERADE
