@@ -7,6 +7,8 @@ https://stackoverflow.com/questions/41984399/denied-requested-access-to-the-reso
 
 https://runnable.com/blog/9-common-dockerfile-mistakes
 
+https://mybrainimage.wordpress.com/2017/02/05/docker-change-port-mapping-for-an-existing-container/
+
 #### How does it work?
 
 #### Some Tweaks
