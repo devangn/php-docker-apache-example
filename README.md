@@ -43,6 +43,11 @@ sudo iptables -A POSTROUTING -t nat -p udp -m udp -s 172.17.0.2/32 -d 172.17.0.2
 #IMP
 By typing ctrl+p and ctrl+q after each other, you turn interactive mode to daemon mode, which keeps the container running but frees up your terminal.
 
+#docker user access change
+groupadd docker
+gpasswd -a inextrix docker
+chmod 777 /var/run/docker.sock
+
 # to connect terminal to particular image/container on front
 docker run -i -t --entrypoint /bin/bash <imageID>
 sudo docker exec -i -t <container_name_or_id> /bin/bash
