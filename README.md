@@ -9,6 +9,9 @@ https://runnable.com/blog/9-common-dockerfile-mistakes
 
 https://mybrainimage.wordpress.com/2017/02/05/docker-change-port-mapping-for-an-existing-container/
 
+If internet is not working on container
+https://stackoverflow.com/questions/24991136/docker-build-could-not-resolve-archive-ubuntu-com-apt-get-fails-to-install-a
+
 #### How does it work?
 
 #### Some Tweaks
