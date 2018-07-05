@@ -30,6 +30,16 @@ docker run -d -p 8080:80 php-docker-apache-example
 #For astpp-freeswitch container
 docker run --restart=always -i -t -p 4001:8021 -p 5001:5001 -p 5001:5001/udp -p 17000:17000/udp -p 17001:17001/udp -p 17002:17002/udp -p 17003:17003/udp -p 17004:17004/udp -p 17005:17005/udp -p 17006:17006/udp -p 17007:17007/udp -p 17008:17008/udp -p 17009:17009/udp --name fs_ketan <image_id> /bin/bash
 
+==================
+#ssh or sftp to container
+apt-get install ssh
+/etc/ssh/sshd_config
+
+PermitRootLogin without-password
+change to
+PermitRootLogin yes
+==================
+
 #To create symbolic link from host to container
     -v /home/test/:/home/test
 #To not start container at host restart
