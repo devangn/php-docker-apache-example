@@ -33,11 +33,15 @@ docker run --restart=always -i -t -p 4001:8021 -p 5001:5001 -p 5001:5001/udp -p 
 ==================
 #ssh or sftp to container
 apt-get install ssh
+echo 'root:my_root_pwd' | chpasswd
+
 /etc/ssh/sshd_config
 
 PermitRootLogin without-password
 change to
 PermitRootLogin yes
+
+/usr/sbin/sshd -D
 ==================
 
 #To create symbolic link from host to container
