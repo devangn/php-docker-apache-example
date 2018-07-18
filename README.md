@@ -65,6 +65,15 @@ groupadd docker
 gpasswd -a inextrix docker
 chmod 777 /var/run/docker.sock
 
+# How to copy docker images from one host to another
+You will need to save the docker image as a tar file:
+
+docker save -o <path for generated tar file> <image name>
+
+Then copy your image to a new system with regular file transfer tools such as cp or scp. After that you will have to load the image into docker:
+
+docker load -i <path to image tar file>
+
 # to connect terminal to particular image/container on front
 docker run -i -t --entrypoint /bin/bash <imageID>
 sudo docker exec -i -t <container_name_or_id> /bin/bash
