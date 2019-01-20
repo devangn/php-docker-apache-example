@@ -1,3 +1,37 @@
+==============
+cgrates
+
+how to configure cgrates
+https://asciinema.org/a/0lwlputceg52xssqgra7wjza0
+How to run hello word go
+https://www.digitalocean.com/community/tutorials/how-to-install-go-on-debian-8
+Steps
+  481  vim ~/.profile
+  482  go get github.com/Masterminds/glide
+  483  ls work/
+  484  ls work/bin/
+  485  go get github.com/cgrates/cgrates
+  486  ls work/bin/
+  487  ls work/src/
+  488  ls work/src/github.com/cgrates/cgrates/
+  489  ls work/src/github.com/Masterminds/glide/
+  490  go get github.com/cgrates/cgrates
+  491* vim work/src/github.com/cgrates/cgrates/
+  492  vim work/src/github.com/cgrates/cgrates/README.md 
+  493  cd work/src/github.com/cgrates/cgrates/
+  494  glide version
+  495  glide -version
+  496  glide install
+  497  ls
+  498  ls vendor/
+  499  ./build.sh 
+  500  cgr-engine -help
+  501  cd /root/work/bin/
+  502  ls
+  503  history
+
+
+==============
 ## Example of a PHP web application using Docker
 
 #### Important links
